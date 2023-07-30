@@ -1,0 +1,109 @@
+/* Tried to keep all styling classes as generic as possible. */
+
+.section-padding {
+  padding: 9.6rem 0;
+}
+
+.intro {
+  text-align: center;
+}
+
+.intro-description {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* overriding the styling from general for some properties */
+.heading-tertiary {
+  color: #9dc7ce;
+  font-size: 3.6rem;
+  text-transform: none;
+}
+
+.readme-padding {
+  padding: 2.4rem 6.4rem 0 6.4rem;
+}
+
+.readme-date {
+  font-size: 1.4rem;
+  margin-bottom: 2.4rem;
+}
+
+.readme-header {
+  font-size: 2rem;
+}
+
+.readme-textbox {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  padding: 2.4rem 2.4rem 0 2.4rem;
+  text-align: justify;
+}
+
+.readme-textbox p:nth-child(2) {
+  margin-bottom: 2.4rem;
+}
+
+.readme-textbox li:not(:last-child) {
+  margin-bottom: 1.2rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.sub-list {
+  padding: 0 2.4rem;
+}
+
+.icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.strong {
+  color: #0b7285;
+  margin-bottom: 2.4rem;
+  font-weight: 700;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.link,
+.link:link,
+.link:visited {
+  text-decoration: underline;
+  font-weight: 600;
+  color: #0b7285;
+}
+
+.link:hover,
+.link:active {
+  background-color: #9dc7ce;
+}
+
+/* adding to the styling from general */
+.copyright {
+  text-align: center;
+}
+
+.panel {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+.accordion {
+  margin-top: 4.8rem;
+  margin-bottom: 2.4rem;
+}
+
+.sticky .intro {
+  margin-top: 9.6rem;
+}

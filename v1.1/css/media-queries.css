@@ -1,0 +1,791 @@
+@media (max-width: 84em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 70em) {
+  .heading-primary {
+    font-size: 6.2rem;
+  }
+  .heading-secondary {
+    font-size: 4.4rem;
+  }
+
+  .heading-primary {
+    font-size: 6.2rem;
+  }
+  .heading-secondary {
+    font-size: 4.4rem;
+  }
+  .experience-company {
+    font-size: 3rem;
+  }
+
+  .portfolio .portfolio-item--ics {
+    justify-self: right;
+  }
+  .portfolio .portfolio-item--omnifood {
+    justify-self: left;
+  }
+  .container {
+    max-width: 100rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+  .section-personal .subheading::before {
+    left: 73%;
+  }
+
+  .personal-box {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .personal-extra {
+    font-size: 1.8rem;
+    bottom: 50rem;
+  }
+
+  .personal:hover .amsterdam-extra,
+  .personal:active .amsterdam-extra {
+    bottom: -27.5rem;
+  }
+
+  .personal:hover .travel-extra,
+  .personal:active .travel-extra,
+  .personal:hover .travel-extra2,
+  .personal:active .travel-extra2 {
+    bottom: 5rem;
+  }
+
+  .personal:hover .anime-gallery,
+  .personal:active .anime-gallery {
+    transform: scale(1.5);
+  }
+
+  .anime-gallery {
+    left: -20.5rem;
+    bottom: -22rem;
+  }
+
+  .webtoons:hover .webtoon-list,
+  .webtoons:active .webtoon-list {
+    left: -15.4rem;
+    bottom: -19.9rem;
+    z-index: 999;
+    backdrop-filter: blur(2px);
+  }
+
+  .webtoon-list {
+    bottom: -7rem;
+  }
+
+  .food img {
+    width: 120%;
+  }
+
+  .personal:hover .food-coffee,
+  .personal:active .food-coffee {
+    left: -63.6rem;
+    bottom: -27rem;
+    width: 120%;
+  }
+  .personal:hover .food-comfort,
+  .personal:active .food-comfort {
+    left: -84rem;
+    bottom: -23.6rem;
+  }
+  .personal:hover .food-dessert,
+  .personal:active .food-dessert {
+    left: -62.7rem;
+    bottom: -1.8rem;
+  }
+
+  .personal:hover .food-asian,
+  .personal:active .food-asian {
+    left: -26.9rem;
+    bottom: -1rem;
+    width: 175%;
+  }
+
+  .personal:hover .food-fine,
+  .personal:active .food-fine {
+    left: -22rem;
+    bottom: -26rem;
+    width: 175%;
+  }
+
+  .personal-extra.food-coffee,
+  .personal-extra.food-asian,
+  .personal-extra.food-comfort,
+  .personal-extra.food-dessert,
+  .personal-extra.food-fine {
+    bottom: 50rem;
+    left: -150rem;
+  }
+
+  .personal:hover .vid-gif,
+  .personal:active .vid-gif {
+    bottom: -7rem;
+  }
+
+  .vid-gif {
+    bottom: -40rem;
+  }
+
+  .experience,
+  .accordion-box,
+  .portfolio {
+    padding: 2.4rem 0;
+  }
+  @keyframes marquee {
+    0% {
+      transform: translateX(10%);
+    }
+    100% {
+      transform: translateX(-160%);
+    }
+  }
+}
+
+@media (max-width: 64em) {
+  .nav-dropdown:hover .nav-dropdown-content,
+  .nav-dropdown:active .nav-dropdown-content {
+    display: none;
+  }
+
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+  .skills-marquee {
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    overflow: visible;
+  }
+
+  .skill-item {
+    width: max-content;
+  }
+
+  .marquee-animation {
+    animation: none;
+  }
+  .skill-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* MOBILE NAV */
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  .main-nav {
+    background-color: rgba(206, 227, 231, 0.85);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    /* hide nav */
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    z-index: 99;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+  }
+
+  .nav-open .btn {
+    font-size: 3.6rem;
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    font-size: 3.6rem;
+  }
+}
+
+@media (max-width: 53em) {
+  .heading-primary {
+    letter-spacing: 1rem;
+  }
+
+  .heading-secondary {
+    font-size: 3rem;
+  }
+
+  .container {
+    max-width: 80rem;
+  }
+
+  .hero-description {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+
+  .about {
+    grid-template-columns: 1fr 2fr 1fr;
+    row-gap: 4.8rem;
+    column-gap: 0;
+  }
+  .about-text-box {
+    grid-column: 1 / -1;
+    /* grid-template-rows: ; */
+    padding: 0 8rem;
+  }
+
+  .about-img-box {
+    grid-column: 2/3;
+    grid-row: 1/2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-img {
+    width: 75%;
+    justify-self: center;
+  }
+
+  .step-text-box {
+    grid-column: 2/3;
+    text-align: center;
+    margin-bottom: 2.4rem;
+  }
+
+  .section-personal .subheading::before {
+    left: 67%;
+  }
+
+  .personal-box {
+    grid-template-columns: 1fr 3fr;
+  }
+
+  .personal {
+    grid-column: 1/2;
+  }
+
+  .personal:hover .amsterdam-extra,
+  .personal:active .amsterdam-extra {
+    bottom: -11.5rem;
+    left: 24rem;
+    width: 200%;
+  }
+
+  .personal:hover .travel-extra,
+  .personal:active .travel-extra,
+  .personal:hover .travel-extra2,
+  .personal:active .travel-extra2 {
+    bottom: -8.7rem;
+  }
+
+  .personal:hover .travel-extra,
+  .personal:active .travel-extra {
+    left: 18rem;
+  }
+
+  .personal:hover .travel-extra2,
+  .personal:active .travel-extra2 {
+    left: 40rem;
+  }
+
+  .food img {
+    width: 100%;
+  }
+  .personal:hover .food-coffee,
+  .personal:active .food-coffee {
+    left: 21rem;
+    bottom: 0;
+    width: 80%;
+  }
+  .personal:hover .food-comfort,
+  .personal:active .food-comfort {
+    left: 38rem;
+    bottom: -2.6rem;
+  }
+
+  .personal:hover .food-dessert,
+  .personal:active .food-dessert {
+    left: 59rem;
+    bottom: 0;
+  }
+
+  .personal:hover .food-asian,
+  .personal:active .food-asian {
+    width: 130%;
+    left: 22rem;
+    bottom: -22.6rem;
+  }
+  .personal:hover .food-fine,
+  .personal:active .food-fine {
+    left: 49.3rem;
+    bottom: -22rem;
+    width: 120%;
+  }
+
+  .anime-gallery {
+    left: 33rem;
+    bottom: -9rem;
+  }
+
+  .webtoon-list {
+    grid-template-columns: 1fr;
+  }
+
+  .webtoons:hover .webtoon-list,
+  .webtoons:active .webtoon-list {
+    left: 36rem;
+    bottom: -2rem;
+    z-index: 999;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    transform: scale(1.5);
+  }
+
+  .personal:hover .vid-gif,
+  .personal:active .vid-gif {
+    bottom: 16rem;
+    left: 40rem;
+    transform: scale(2.5);
+  }
+
+  .experience {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 0.5fr);
+    row-gap: 2.4rem;
+  }
+
+  .experience-job {
+    border: none;
+    font-size: 2rem;
+  }
+
+  .experience-company {
+    font-size: 2.4rem;
+  }
+
+  .experience-date {
+    font-size: 1.8rem;
+  }
+
+  .experience-description {
+    margin-top: 0;
+    font-size: 1.6rem;
+  }
+
+  .devops {
+    grid-row: 3/4;
+  }
+
+  .fraud-agent {
+    grid-row: 6/7;
+  }
+  .service-agent {
+    grid-row: 9/10;
+  }
+
+  .accordion {
+    margin-bottom: 4.8rem;
+  }
+
+  .panel {
+    row-gap: 2.4rem;
+  }
+
+  .panel .fraud-agent {
+    grid-column: 1/-1;
+    grid-row: 1;
+  }
+  .panel .service-agent {
+    grid-column: 1/-1;
+    grid-row: 4;
+  }
+
+  @keyframes scroll-roll-cert {
+    0% {
+      opacity: 0;
+      transform: translateX(-200%) rotate(-360deg);
+    }
+    75% {
+      opacity: 0.75;
+      transform: translateX(50%) rotate(80deg);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0%) rotate(0);
+    }
+  }
+
+  .portfolio {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-item {
+    width: 50%;
+  }
+
+  .portfolio .portfolio-item--ics {
+    justify-self: center;
+  }
+  .portfolio .portfolio-item--omnifood {
+    justify-self: center;
+    grid-row: 2/3;
+  }
+
+  .section-cta {
+    padding: 12.8rem 3.2rem;
+  }
+
+  .cta-grid {
+    grid-template-columns: 1fr;
+    max-width: 50rem;
+  }
+
+  .cta-gif {
+    height: 25rem;
+    border-radius: 9px 9px 0 0;
+  }
+}
+
+@media (max-width: 44em) {
+  .container {
+    max-width: 63rem;
+  }
+  .section-personal .subheading::before {
+    left: 58%;
+  }
+  .personal:hover .food-coffee,
+  .personal:active .food-coffee {
+    left: 21rem;
+    bottom: 6rem;
+    width: 80%;
+  }
+  .personal:hover .food-comfort,
+  .personal:active .food-comfort {
+    left: 21rem;
+    bottom: -20.6rem;
+  }
+
+  .personal:hover .food-dessert,
+  .personal:active .food-dessert {
+    left: 42rem;
+    bottom: -29rem;
+  }
+
+  .personal:hover .food-asian,
+  .personal:active .food-asian {
+    left: 38rem;
+    bottom: 6rem;
+    width: 110%;
+  }
+  .personal:hover .food-fine,
+  .personal:active .food-fine {
+    left: 42.3rem;
+    bottom: -8rem;
+    width: 100%;
+  }
+  .anime-gallery {
+    left: 28rem;
+    bottom: -9rem;
+  }
+  .personal:hover .anime-gallery,
+  .personal:active .anime-gallery {
+    transform: scale(1.3);
+  }
+  .webtoons:hover .webtoon-list,
+  .webtoons:active .webtoon-list {
+    left: 31rem;
+    transform: scale(1.3);
+  }
+  .personal:hover .vid-gif,
+  .personal:active .vid-gif {
+    bottom: 19rem;
+    left: 32rem;
+    transform: scale(2);
+  }
+
+  .experience,
+  .accordion-box,
+  .portfolio {
+    padding: 2.4rem 4.8rem;
+  }
+
+  .panel .experience-job,
+  .panel .experience-panel {
+    grid-column: 1/-1;
+  }
+
+  .portfolio-item {
+    width: 70%;
+  }
+
+  .footer .container {
+    max-width: 80rem;
+  }
+}
+
+@media (max-width: 34em) {
+  .heading-primary {
+    font-size: 3rem;
+    letter-spacing: 0;
+  }
+
+  .heading-secondary {
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .heading-tertiary {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  .social {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 0;
+  }
+
+  .tooltip-text {
+    left: 13%;
+  }
+
+  .container {
+    max-width: 37rem;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .about-text-box {
+    padding: 0 0.2rem;
+  }
+  .about-text {
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+  .about-img-box {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .step-text-box {
+    grid-column: 1;
+  }
+
+  .section-personal .subheading::before {
+    left: 0;
+  }
+
+  .personal-extra {
+    z-index: 999;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background-color: rgba(11, 115, 133, 0.4);
+  }
+
+  .personal:hover .amsterdam-extra,
+  .personal:active .amsterdam-extra {
+    bottom: -26.5rem;
+    left: 0;
+    width: 150%;
+  }
+
+  .personal:hover .travel-extra,
+  .personal:active .travel-extra {
+    bottom: 2rem;
+    left: 14rem;
+  }
+
+  .personal:hover .travel-extra2,
+  .personal:active .travel-extra2 {
+    bottom: -13rem;
+    left: 14rem;
+  }
+
+  .food img {
+    width: 50%;
+  }
+
+  .personal:hover .food-coffee,
+  .personal:active .food-coffee {
+    left: 21rem;
+    bottom: 13rem;
+    width: 50%;
+  }
+  .personal:hover .food-comfort,
+  .personal:active .food-comfort {
+    left: 21rem;
+    bottom: -20.2rem;
+  }
+
+  .personal:hover .food-dessert,
+  .personal:active .food-dessert {
+    left: 21rem;
+    bottom: -31rem;
+  }
+
+  .personal:hover .food-asian,
+  .personal:active .food-asian {
+    left: 21rem;
+    bottom: 3rem;
+    width: 70%;
+  }
+  .personal:hover .food-fine,
+  .personal:active .food-fine {
+    left: 21rem;
+    bottom: -7rem;
+    width: 70%;
+  }
+  .anime-gallery {
+    left: 28rem;
+    bottom: -9rem;
+  }
+  .personal:hover .anime-gallery,
+  .personal:active .anime-gallery {
+    transform: scale(1.3);
+  }
+  .webtoons:hover .webtoon-list,
+  .webtoons:active .webtoon-list {
+    left: 31rem;
+    transform: scale(1.3);
+  }
+  .personal:hover .vid-gif,
+  .personal:active .vid-gif {
+    bottom: 19rem;
+    left: 32rem;
+    transform: scale(2);
+  }
+
+  .anime-gallery {
+    grid-template-columns: 30% 30%;
+    left: 16rem;
+    bottom: -18rem;
+  }
+
+  .personal:hover .anime-gallery,
+  .personal:active .anime-gallery {
+    transform: scale(1);
+  }
+
+  .anime .personal-extra {
+    background: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .webtoons:hover .webtoon-list,
+  .webtoons:active .webtoon-list {
+    left: 13rem;
+    transform: scale(1);
+  }
+
+  .personal:hover .vid-gif,
+  .personal:active .vid-gif {
+    bottom: 19rem;
+    left: 7rem;
+    transform: scale(1.5);
+  }
+
+  .experience,
+  .accordion-box {
+    padding: 0;
+    row-gap: 0.8rem;
+    grid-template-rows: repeat(5, 0.3fr);
+  }
+
+  .experience .heading-secondary {
+    display: none;
+  }
+
+  .experience-job {
+    justify-content: center;
+  }
+
+  .company {
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+  .experience-company {
+    text-align: center;
+  }
+  .company-logo-link {
+    max-width: 75%;
+  }
+  .experience-job {
+    border: none;
+    font-size: 1.8rem;
+  }
+
+  .portfolio {
+    padding: 0;
+  }
+  .portfolio-item {
+    width: 100%;
+  }
+
+  .certificates {
+    grid-template-columns: 1fr;
+  }
+  .certificates a:first-child {
+    grid-column: 1;
+  }
+
+  .cta-grid {
+    max-width: 40rem;
+  }
+
+  .cta-gif {
+    height: 20rem;
+    border-radius: 9px 9px 0 0;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    padding: 2.4rem 1.6rem;
+  }
+  .first-col {
+    grid-row: 3;
+    gap: 1.2rem;
+  }
+  .grid-column4-5 {
+    grid-column: 1/2;
+  }
+  .grid-column6-7 {
+    grid-column: 2/3;
+  }
+}

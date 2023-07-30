@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Resume of Irsjaad Mahabier, a Mendix developer with an affinity for styling."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FAVICONS -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/media-queries.css" />
+
+    <!-- GOOGLE FONT NOTO SERIF -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+NP+Hmong:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ION ICONS  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- Smooth scrolling -->
+
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+
+    <script defer src="script.js"></script>
+
+    <title>Hi, I'm Irsjaad! &brvbar; Welcome!</title>
+  </head>
+
+  <body id="body">
+    <!-- SIDEBAR NAVIGATION -->
+    <div class="side-nav" id="side-nav">
+      <button
+        onclick="aboutFunction()"
+        class="side-nav-btn aboutBtn"
+        id="aboutBtn"
+        title="Go to About Me"
+      >
+        About
+      </button>
+      <button
+        onclick="expFunction()"
+        class="side-nav-btn expBtn"
+        id="expBtn"
+        title="Go to Experience"
+      >
+        Experience
+      </button>
+      <button
+        onclick="portfolioFunction()"
+        class="side-nav-btn portfolioBtn"
+        id="portfolioBtn"
+        title="Go to Portfolio"
+      >
+        Portfolio
+      </button>
+      <button
+        onclick="topFunction()"
+        class="side-nav-btn topBtn"
+        id="topBtn"
+        title="Go to top"
+      >
+        Top &uarr;
+      </button>
+    </div>
+
+    <div class="mobile-unfriendly">
+      Sorry it seems the screen size is too small and the developer (me) hasn't
+      build it very friendly yet. Be sure to come back when a newer version
+      comes out soon!
+    </div>
+
+    <header class="header">
+      <a class="logo" href="#">
+        <img
+          class="img-logo"
+          alt="Irsjaad Mahabier logo"
+          src="img/irm-logo-color-on-transparent-background.png"
+      /></a>
+
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li class="nav-dropdown">
+            <a class="main-nav-link" href="#about">About me</a>
+            <div class="nav-dropdown-content">
+              <a href="#personal">Personal </a>
+            </div>
+          </li>
+
+          <li class="nav-dropdown">
+            <a class="main-nav-link" href="#experience">Experience</a>
+            <div class="nav-dropdown-content">
+              <a href="#work">Work</a>
+              <a href="#skills">Skills</a>
+            </div>
+          </li>
+
+          <li class="nav-dropdown">
+            <a class="main-nav-link" href="#portfolio">Portfolio</a>
+            <div class="nav-dropdown-content">
+              <a href="#portfolio">Achievements</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <a class="btn" href="mailto:irmahabier@gmail.com">Let's connect</a>
+    </header>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section class="section-hero" id="hero">
+        <div class="hero">
+          <div class="hero-text-box flex-column">
+            <h1 class="heading-primary typewriter">Irsjaad Mahabier</h1>
+            <p class="hero-description">
+              Mendix developer with an affinity for styling.
+            </p>
+            <div class="social flex-center">
+              <a
+                href="https://www.linkedin.com/in/irsjaad-mahabier/"
+                class="social-links flex-center"
+                target="_blank"
+              >
+                <ion-icon class="icon" name="logo-linkedin"> </ion-icon>
+              </a>
+
+              <a
+                href="https://www.instagram.com/ir.mahabier/"
+                class="social-links flex-center"
+                target="_blank"
+              >
+                <ion-icon class="icon" name="logo-instagram"> </ion-icon>
+              </a>
+              <div class="tooltip">
+                <a href="#body" class="social-links flex-center tooltip">
+                  <ion-icon class="icon" name="logo-discord"> </ion-icon>
+                </a>
+                <span class="tooltip-text hero-tooltip"
+                  >Ryan07&<span>#</span>9332
+                </span>
+              </div>
+
+              <a
+                href="mailto:irmahaber@gmail.com"
+                class="social-links flex-center"
+                target="_blank"
+              >
+                <ion-icon class="icon" name="mail-outline"> </ion-icon>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT ME SECTION -->
+      <section class="section-about" id="about">
+        <div class="container">
+          <p class="subheading">about me</p>
+          <div class="about">
+            <div class="about-text-box">
+              <h2 class="heading-secondary">
+                Hi and welcome to my online resume.
+              </h2>
+              <p class="about-text">
+                I'm a motivated and eager to learn Mendix developer with 2 years
+                of experience.
+                <br />
+                I believe in
+                <span class="text-strong">consistent</span>,
+                <span class="text-strong">sustainable</span> and
+                <span class="text-strong">simple</span>
+                building, with an importance on clear communication and mutual
+                respect.
+                <br />
+                I've gone through a number of phases in my career, each of them
+                adding essential pieces to my continuous evolving work ethos and
+                philosophy. This unceasing learning curve has strengthened my
+                ability to adapt and be creative but staying true to my core
+                believes.
+              </p>
+            </div>
+            <div class="about-img-box">
+              <img
+                src="img/About-me.jpg"
+                class="about-img"
+                alt="Photo of Irsjaad Mahabier, the author."
+              />
+            </div>
+
+            <div class="step-text-box">
+              <h3 class="heading-tertiary">
+                <span class="step-number">01</span> consistency
+              </h3>
+              <p class="step-description">
+                Repetitive and clear structure in the code ensures mitigation of
+                suprises. Consistency creates dependability.
+              </p>
+            </div>
+            <div class="step-text-box">
+              <h3 class="heading-tertiary">
+                <span class="step-number">02</span> sustainability
+              </h3>
+              <p class="step-description">
+                Build future-proof and easy to maintain applications. Fulfill
+                todays needs without compromising tomorrow's wants.
+              </p>
+            </div>
+            <div class="step-text-box">
+              <h3 class="heading-tertiary">
+                <span class="step-number">03</span> simplicity
+              </h3>
+              <p class="step-description">
+                Keeping things simple and clear wheverever possible. So I can
+                stay consistent and sustainable.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Something personal -->
+
+      <section class="section-personal" id="personal">
+        <div class="container top-border">
+          <p class="subheading">personal</p>
+          <div class="personal-box">
+            <div class="personal amsterdam">
+              <ion-icon
+                class="personal-icon icon"
+                name="business-outline"
+              ></ion-icon>
+              <p class="personal-title">Amsterdam</p>
+            </div>
+
+            <div class="personal travel">
+              <ion-icon
+                class="personal-icon icon"
+                name="airplane-outline"
+              ></ion-icon>
+              <p class="personal-title">Travel</p>
+            </div>
+
+            <div class="personal food">
+              <ion-icon
+                class="personal-icon icon"
+                name="heart-outline"
+              ></ion-icon>
+              <p class="personal-title">Food</p>
+            </div>
+
+            <div class="personal anime">
+              <ion-icon class="personal-icon icon" name="tv-outline"></ion-icon>
+              <p class="personal-title">Anime</p>
+            </div>
+
+            <div class="personal webtoons">
+              <ion-icon
+                class="personal-icon icon"
+                name="book-outline"
+              ></ion-icon>
+              <p class="personal-title">Webtoons</p>
+            </div>
+
+            <div class="personal videogames">
+              <ion-icon
+                class="personal-icon icon"
+                name="game-controller-outline"
+              ></ion-icon>
+              <p class="personal-title">Videogames</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE SECTION -->
+      <section class="section-experience" id="experience">
+        <div class="container">
+          <p class="subheading">Experience</p>
+          <div class="experience">
+            <h2 class="heading-secondary" id="work">work.</h2>
+            <div class="company">
+              <a
+                class="company-logo-link"
+                href="https://www.icscards.nl/info/over-ics"
+                target="_blank"
+              >
+                <img
+                  class="company-logo"
+                  src="img/ICS-logo.gif"
+                  alt="Logo of International Card Services"
+                />
+              </a>
+              <p class="experience-company">International Card Services</p>
+            </div>
+
+            <!-- MENDIX DEV -->
+            <div class="experience-job">
+              <p>DevOps Engineer Mendix developer</p>
+            </div>
+
+            <div class="experience-date flex-center">
+              <p class="">January 2021 &mdash; PRESENT</p>
+            </div>
+
+            <p class="experience-description">
+              As a <u>developer</u> building both a responsive and native
+              application using Mendix as a front-end layer with non persistent
+              entities. Integrating several other layers with Mendix via REST
+              calls and styling the application using CSS and custom widgets.
+              <br />As a <u>consultant</u> interacting with different teams to
+              propose solutions for features wanted from the business and how to
+              best implement these using Mendix and other technologies.
+            </p>
+
+            <!-- FRAUD AGENT -->
+            <div class="experience-job">
+              <p>Fraud Detection and Analysis Agent</p>
+            </div>
+
+            <div class="experience-date flex-center bg-color-l">
+              <p class="">November 2018 &mdash; December 2020</p>
+            </div>
+
+            <p class="experience-description">
+              Monitoring and analyzing transactions, recognizing fraud patterns,
+              securing customer and credit card details and database lookups to
+              track patterns and analyzing next possible targets.
+            </p>
+
+            <!-- SERVICE AGENT -->
+            <div class="experience-job">
+              <p>Customer Care Service Agent</p>
+            </div>
+
+            <div class="experience-date flex-center bg-color-l">
+              <p class="">September 2011 &mdash; October 2018</p>
+            </div>
+
+            <p class="experience-description">
+              Guiding and helping customers with any queries related to the
+              product(s). Customer care, handling complaints, administrative
+              activities. Customer care, handling complaints, administrative
+              activities.
+            </p>
+          </div>
+
+          <!-- SKILL MARQUEE SECTION -->
+          <section class="section-skills" id="skills">
+            <p class="subheading">Skills</p>
+            <div class="skills-marquee">
+              <ul class="skill-list marquee-animation">
+                <li class="skill-item technical">Building in Mendix</li>
+                <li class="skill-item technical">HTML</li>
+                <li class="skill-item technical">CSS</li>
+                <li class="skill-item technical">JavaScript</li>
+                <li class="skill-item technical">REST</li>
+                <li class="skill-item technical">Testing</li>
+                <li class="skill-item soft">Strong work ethic</li>
+                <li class="skill-item soft">Teamwork</li>
+                <li class="skill-item soft">Clear communication</li>
+                <li class="skill-item soft">Adaptability</li>
+                <li class="skill-item soft">Leadership skill</li>
+                <li class="skill-item soft">Problem solving oriented</li>
+                <li class="skill-item language">Dutch - Native</li>
+                <li class="skill-item language">English - Fluent</li>
+                <li class="skill-item language">Spanish - Moderate</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO SECTION -->
+      <section class="section-portfolio" id="portfolio">
+        <div class="container top-border">
+          <p class="subheading">Portfolio</p>
+          <!-- <h2 class="heading-secondary">projects.</h2> -->
+          <div class="portfolio">
+            <h2 class="heading-secondary">projects.</h2>
+            <!-- ICS PROJECT AURORA -->
+            <div class="portfolio-item portfolio-item--ics">
+              <img
+                src="img/portfolio-ICS-resized.png"
+                class="portfolio-img"
+                alt="Marketing picture of ICS project Aurora"
+              />
+
+              <div class="portfolio-content">
+                <p class="portfolio-title">Project Aurora</p>
+                <p class="portfolio-text">
+                  Rebuilding the landscape of services offered for credit cards.
+                  <br />
+
+                  I worked on the front-end part of the project in which we
+                  received data from other technologies to manipulate and show
+                  on screens to the user in both web as native (mobile app).
+                </p>
+                <div class="portfolio-status">
+                  <span class="status-heading">Status:</span>
+                  <div class="status-tag flex-center tag--onhold-ics">
+                    <ion-icon
+                      class="status-icon"
+                      name="pause-outline"
+                    ></ion-icon>
+                    <span>On Hold</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- OMNIFOOD PROJECT -->
+            <div class="portfolio-item portfolio-item--omnifood">
+              <img
+                src="img/meal-1.jpg"
+                class="portfolio-img"
+                alt="Picture of three bowls with gyoza's"
+              />
+
+              <div class="portfolio-content">
+                <p class="portfolio-title">Project Omnifood</p>
+                <p class="portfolio-text">
+                  The smart food subscription that will make you eat healthy
+                  again.
+                  <br />
+                  Fictional company but it is the first real-life project I have
+                  done. In this project I gained experience in design and coding
+                  principles and using HTML, CSS and a bit of JavaScript.
+                </p>
+                <div class="portfolio-status">
+                  <span class="status-heading">Status:</span>
+                  <a
+                    href="https://ryan-omnifood.netlify.app/"
+                    target="_blank"
+                    class="status-tag flex-center tag--active-omnifood"
+                    ><ion-icon
+                      class="status-icon"
+                      name="open-outline"
+                    ></ion-icon>
+                    Live Demo</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- ACHIEVEMENTS LIST -->
+            <div class="achievements" id="portfolio">
+              <!-- not sure if flex-center should be generic only used once so far.. -->
+              <p class="subheading flex-center">
+                <ion-icon class="personal-icon" name="school"></ion-icon>
+                Achievements
+              </p>
+
+              <ul class="achievements-list flex-column">
+                <li class="achievement">
+                  <span>Mendix Rapid Developer Certificate </span>
+                </li>
+                <li class="achievement">
+                  <span>Mendix Intermediate Developer Certificate</span>
+                </li>
+                <li class="achievement">
+                  <span>Lean Six Sigma Orange Belt</span>
+                </li>
+                <li class="achievement">
+                  <span>Responsive Websites with HTML and CSS Certificate</span>
+                </li>
+                <li class="achievement">
+                  <span>Dutch Financial Supervision Act (WFT) Certificate</span>
+                </li>
+                <li class="achievement">
+                  <span>Emergency Response Certificate</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA SECTION -->
+      <section class="section-cta">
+        <div class="cta-grid">
+          <div class="cta-gif"></div>
+          <div class="cta-text-box flex-column">
+            <p class="cta-heading">Let's connect and get that bread!</p>
+            <p class="cta-text">
+              Nothing ventured, nothing gained. Or we could also talk about
+              anime all day long, the latest developments in the world, maybe
+              which country has the nicest beaches.
+            </p>
+            <a class="btn" href="mailto:irmahabier@gmail.com">
+              Let's connect
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer" id="footer">
+      <div class="container footer-grid">
+        <div class="first-col flex-column">
+          <h2 class="footer-heading"><a href="#"> Irsjaad Mahabier</a></h2>
+          <div>
+            <ul class="footer-social">
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/irsjaad-mahabier/"
+                  class="flex-center"
+                  target="_blank"
+                  ><ion-icon class="icon" name="logo-linkedin"> </ion-icon
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/ir.mahabier/"
+                  class="flex-center"
+                  target="_blank"
+                  ><ion-icon class="icon" name="logo-instagram"> </ion-icon
+                ></a>
+              </li>
+              <li class="tooltip">
+                <a href="#footer" class="flex-center"
+                  ><ion-icon class="icon" name="logo-discord"> </ion-icon
+                ></a>
+                <span class="tooltip-text footer-tooltip"
+                  >Ryan07&<span>#</span>9332
+                </span>
+              </li>
+
+              <li>
+                <a
+                  href="mailto:irmahaber@gmail.com"
+                  class="flex-center"
+                  target="_blank"
+                  ><ion-icon class="icon" name="mail-outline"> </ion-icon
+                ></a>
+              </li>
+            </ul>
+            <p class="copyright">
+              Copyright &copy; <span class="year">2100</span> by
+              <a href="#"> Irsjaad Mahabier</a> All rights reserved.
+            </p>
+          </div>
+        </div>
+
+        <div class="nav-col flex-column grid-column4-5">
+          <p class="subheading">About</p>
+          <a class="footer-link" href="#about">About me</a>
+          <a class="footer-link" href="#personal">Personal</a>
+        </div>
+        <div class="nav-col flex-column grid-column6-7">
+          <p class="subheading">Experience</p>
+          <a class="footer-link" href="#work">Work</a>
+          <a class="footer-link" href="#skills">Skills</a>
+        </div>
+        <div class="nav-col flex-column grid-column4-5">
+          <p class="subheading">Portfolio</p>
+          <a class="footer-link" href="#portfolio">Projects</a>
+          <a class="footer-link" href="#portfolio">Achievements</a>
+        </div>
+        <div class="nav-col flex-column grid-column6-7">
+          <p class="subheading">Read Me</p>
+          <a class="footer-link" href="readme/readme.html#versions"
+            >Versioning</a
+          >
+          <a class="footer-link" href="readme/readme.html#reflections"
+            >Reflection</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

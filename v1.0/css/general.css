@@ -1,0 +1,278 @@
+/* 
+
+--- 01 TYPOGRAPY SYSTEM   
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights:
+Default: 400
+Medium: 500
+Semibold: 600
+Bold: 700
+
+- Line heights:
+Default: 1
+Small: 1.2
+Medium: 1.4
+Paragraph: 1.6
+Large: 1.8 (not used)
+
+- Letter spacing
+- 0.75px
+- 3px
+- 20px
+
+--- COLORS
+
+- Primary: #0b7285
+- Tints:  #CEE3E7, #b6d5da, #9dc7ce
+- Shades: #0a6778, #095b6a, #063943, #042e35, #032228, 
+- Accents:  
+- Greys:  
+#333
+#444
+#555
+
+--- SHADOWS
+
+box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.1);
+
+--- BORDER-RADIUS
+
+Default: 9px
+
+--- Transitions
+- 0.3s
+- 0.5s
+- 1.0s
+
+--- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+  /* instead of outline we use boxshadow */
+  box-shadow: 0 0 0 0.8rem rgba(11, 115, 133, 0.3);
+}
+
+html {
+  /* default: 1 rem = 16px
+  font-size: 10px;
+  10px / 16px = 0.625 =  62.5%
+  percentage of users browser font-size setting */
+  font-size: 62.5%;
+  overflow-x: hidden;
+
+  /* Does NOT work on Safari and Edge */
+  scroll-behavior: smooth;
+}
+
+body,
+html {
+  font-family: "Noto Serif NP Hmong", serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+  height: 100%;
+
+  /* only works if there is nothing absolutely positioned in relation to body */
+  /* overflow-x: hidden; */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: "Noto Serif NP Hmong", serif;
+}
+
+/****************************************/
+/* GENERAL REUSABLECOMPONENTS */
+/****************************************/
+
+.container {
+  /* 1140px some convention */
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary,
+.subheading {
+  color: #333;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.heading-primary {
+  font-size: 8.6rem;
+  line-height: 1.8;
+  color: #032228;
+  letter-spacing: 20px;
+}
+
+.heading-secondary {
+  font-size: 5.2rem;
+  line-height: 1.2;
+  margin-bottom: 4.8rem;
+}
+
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 2.4rem;
+}
+
+.subheading {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: #0b7285;
+
+  text-decoration: overline;
+  letter-spacing: 3px;
+  margin-bottom: 2.4rem;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-column4-5 {
+  grid-column: 4/5;
+}
+.grid-column6-7 {
+  grid-column: 6/7;
+}
+
+.z-index-top {
+  z-index: 9999;
+}
+
+.text-strong {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #0b7285;
+}
+
+.top-border {
+  border-top: 1px solid #eee;
+  padding-top: 9.6rem;
+}
+
+.icon {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+
+  font-size: 2.4rem;
+  color: #fff;
+  background-color: #0b7285;
+
+  padding: 1.2rem 2.4rem;
+  border: none;
+  border-radius: 9px;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #095b6a;
+  text-decoration: none;
+
+  transform: scale(1.1);
+  transition: all 0.3s;
+}
+
+/* TOOLTIP: its used in both the Hero section as in the Footer section */
+
+.tooltip {
+  position: relative;
+}
+
+/* on hover */
+.tooltip:hover .tooltip-text {
+  display: inline-block;
+  z-index: 999;
+}
+
+/* general class for the span text */
+.tooltip-text {
+  display: none;
+  position: absolute;
+
+  font-size: 1.6rem;
+  font-weight: 700;
+
+  padding: 1.2rem;
+  border-radius: 9px;
+
+  left: 0%;
+}
+
+/* class for the arrow of tooltip */
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -1rem;
+  border-width: 1rem;
+  border-style: solid;
+}
+
+.hero-tooltip {
+  color: #fff;
+  background-color: #042e35;
+  top: 125%;
+  margin-left: -38px;
+}
+
+.footer-tooltip {
+  color: #032228;
+  background-color: #fff;
+  top: 140%;
+  margin-left: -40px;
+}
+
+.hero-tooltip::after {
+  border-color: transparent transparent #042e35 transparent;
+}
+.footer-tooltip::after {
+  border-color: transparent transparent #fff transparent;
+}

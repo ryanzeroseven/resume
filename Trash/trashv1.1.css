@@ -1,0 +1,97 @@
+/****************************************/
+/* ACHIEVEMENTS LIST */
+/****************************************/
+
+.achievements {
+  background: linear-gradient(180deg, #fff, #0b7285);
+  border-radius: 9px;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.08);
+  /* first padding */
+  padding: 1.2rem;
+}
+
+.subheading.flex-center {
+  gap: 1.2rem;
+}
+
+.achievements-list {
+  gap: 1.6rem;
+  /* second padding now all cards have 2.4rem padding left/right */
+  padding: 0 1.2rem;
+  background: linear-gradient(180deg, #032228, #0b7285 72%, #cee3e7 75%);
+  /* background properties needed otherwise it will not work with gradient. */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.achievement {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* label on the images */
+::before {
+  position: relative;
+  font-weight: 700;
+  color: #042e35;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0 1.2rem;
+  border-radius: 5px;
+}
+
+.food img::before {
+  content: "Coffee, YES!";
+  bottom: -9.9rem;
+  left: 2.8rem;
+}
+
+.food-comfort::before {
+  content: "Comfort food";
+  bottom: -2.9rem;
+  left: 0.7rem;
+}
+
+.food-asian::before {
+  content: "All Asian food";
+  bottom: -11.2rem;
+  left: 4rem;
+}
+
+.food-fine::before {
+  content: "Fine dining";
+  bottom: -3.3rem;
+  left: 2.6rem;
+}
+
+.food-dessert::before {
+  content: "Desserts always";
+  bottom: -4.3rem;
+  left: 0.4rem;
+}
+
+.vid-gif::before {
+  content: "Genshin Impact";
+  text-align: center;
+  text-transform: uppercase;
+  bottom: -16rem;
+  left: 6.7rem;
+}
+
+/* makes the card slide in from right to left. */
+/* ACHIEVEMENTS */
+.animate-div-achievement {
+  animation: scroll-div-achievement 2s ease-in-out;
+}
+
+@keyframes scroll-div-achievement {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}

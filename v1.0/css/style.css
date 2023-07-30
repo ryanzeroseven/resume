@@ -1,0 +1,898 @@
+/****************************************/
+/* SIDE-NAV SECTION */
+/****************************************/
+.side-nav {
+  display: none;
+}
+
+.side-nav-btn {
+  position: fixed;
+  right: 2.4rem;
+
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+
+  padding: 1.2rem;
+  border: none;
+  background-color: #cee3e7;
+  box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+  border-radius: 9px;
+
+  /* animation for side-nav*/
+  animation: side-nav 1s ease-in-out;
+  cursor: pointer;
+}
+
+/* this will make the sidebar appear from the right side into the viewport */
+@keyframes side-nav {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+/* The side-nav buttons heights specification */
+.aboutBtn {
+  bottom: 26.5rem;
+  z-index: 44;
+}
+
+.expBtn {
+  bottom: 21rem;
+  z-index: 33;
+}
+
+.portfolioBtn {
+  bottom: 15.5rem;
+  z-index: 22;
+}
+
+.topBtn {
+  bottom: 10rem;
+  z-index: 11;
+}
+
+.side-nav-btn:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(206, 227, 231, 0.7) 15%,
+    rgba(31, 117, 134, 0.7) 75%
+  );
+  /* background color will gradually move up on hover*/
+  transition: all 1s;
+}
+
+/****************************************/
+/* HEADER */
+/****************************************/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  background-color: #cee3e7;
+  padding: 2.4rem;
+
+  /* Because we want the header to be sticky later */
+  /* height: 9.6rem; */
+}
+
+.img-logo {
+  height: 8rem;
+}
+
+.logo:hover,
+.logo:active {
+  transform: scale(1.5);
+  transition: all 0.5s;
+}
+
+/****************************************/
+/* NAV SECTION */
+/****************************************/
+
+.main-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+
+  font-size: 2rem;
+  font-weight: 500;
+  list-style: none;
+
+  text-transform: uppercase;
+  letter-spacing: -0.2rem;
+}
+
+.main-nav-list a {
+  display: block;
+}
+
+/* DROPDOWN DIV */
+.nav-dropdown {
+  position: relative;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  color: #444;
+  padding: 1.2rem;
+  transition: all 0.3s;
+}
+
+/* both classes since then the background will stay white when moving cursor to the drop down */
+.main-nav-link:hover,
+.main-nav-link:active,
+.nav-dropdown:hover,
+.nav-dropdown:active {
+  color: #095b6a;
+  text-decoration: overline;
+  background-color: #fff;
+
+  /* will make the navigation item move up on hover */
+  transform: translateY(-0.5rem);
+  transition: all 0.3s;
+}
+/* 
+
+/****************************************/
+/* DROPDOWN CONTENT SECTION */
+/****************************************/
+
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  background-color: #cee3e7;
+
+  padding-top: 1.2rem;
+  width: 100%;
+
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+  z-index: 999;
+}
+
+/* Setting it to block so that the content will be below the nav item */
+.nav-dropdown:hover .nav-dropdown-content {
+  display: block;
+}
+
+.nav-dropdown-content a {
+  padding: 1.2rem 0.8rem;
+
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-dropdown-content a:last-child {
+  padding-bottom: 2.4rem;
+}
+
+.nav-dropdown-content a:link,
+.nav-dropdown-content a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-dropdown-content a:hover,
+.nav-dropdown-content a:active {
+  color: #095b6a;
+  text-decoration: underline;
+}
+
+/****************************************/
+/* HERO SECTION */
+/****************************************/
+.section-hero {
+  background-color: #cee3e7;
+  padding: 9.6rem 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(206, 227, 231, 1) 15%,
+    rgba(31, 117, 134, 0.9) 85%
+  );
+}
+
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+}
+
+.hero-text-box {
+  align-items: center;
+  gap: 4.8rem;
+}
+
+.hero-description {
+  font-size: 2rem;
+  letter-spacing: 3px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* TYPEWRITER EFFECT */
+
+.typewriter {
+  overflow: hidden;
+  border-right: 0.1em solid #0b7285;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: demo-typewriter 3s steps(30, end), demo-cursor 1s step-end infinite;
+}
+
+@keyframes demo-typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes demo-cursor {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #0b7285;
+  }
+}
+
+/* SOCIAL LINKS IN HERO SECTION */
+
+.social {
+  gap: 2.4rem;
+  margin-top: 8rem;
+}
+
+.social-links {
+  color: #0b7285;
+  background-color: #fff;
+  cursor: pointer;
+
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 50%;
+  box-shadow: 0 0 8rem 0.8rem rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+
+  position: relative;
+}
+
+.social-links:hover,
+.social-links:active {
+  color: #fff;
+  box-shadow: inset 0 0 99rem #063943;
+  transition: all 1s ease;
+}
+
+/* TOOLTIP ON DISCORD ICON HOVER */
+
+/* tooltip text and container */
+.tooltip-text {
+  display: none;
+  position: absolute;
+
+  font-size: 1.6rem;
+  background-color: #042e35;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 1.2rem;
+
+  top: 125%;
+  left: 0%;
+  margin-left: -35px;
+}
+
+/* tooltip up arrow */
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -1rem;
+  border-width: 1rem;
+  border-style: solid;
+  border-color: transparent transparent #042e35 transparent;
+}
+
+/****************************************/
+/* ABOUT ME SECTION */
+/****************************************/
+.section-about {
+  padding: 9.6rem 0 0 0;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+  padding-top: 2.4rem;
+  margin-bottom: 9.6rem;
+}
+
+.about-text-box {
+  padding: 0 6.4rem;
+  grid-column: 1 / 3;
+}
+
+.about-text {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+.about-img-box img:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease-out;
+}
+
+.about-img {
+  width: 100%;
+  border-radius: 9px;
+}
+
+/* 3 CORE STEPS */
+.step-text-box {
+  width: 100%;
+  height: 100%;
+
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.08);
+  padding: 1.2rem;
+  border-radius: 9px;
+}
+
+.step-number {
+  color: #9dc7ce;
+  font-weight: 600;
+}
+
+.step-description {
+  font-size: 1.8rem;
+  line-height: 1.4;
+}
+
+/****************************************/
+/* PERSONAL SECTION */
+/****************************************/
+
+.section-personal {
+  padding: 0 0 9.6rem 0;
+}
+
+.personal-box {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 3.2rem;
+  padding: 2.4rem 6.4rem;
+}
+
+.personal {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.personal-icon {
+  color: #0b7285;
+
+  background-color: #cee3e7;
+  border-radius: 50%;
+  padding: 0.8rem;
+}
+
+.personal-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 700;
+}
+
+.amsterdam {
+  grid-column: 1/2;
+}
+
+.travel {
+  grid-column: 3/4;
+}
+.food {
+  grid-column: 5/6;
+}
+.anime {
+  grid-column: 2/3;
+}
+.webtoons {
+  grid-column: 4/5;
+}
+.videogames {
+  grid-column: 3/4;
+}
+
+/****************************************/
+/* EXPERIENCE SECTION */
+/****************************************/
+.section-experience {
+  padding: 9.6rem 0;
+  background: linear-gradient(
+    360deg,
+    rgba(206, 227, 231, 0) 30%,
+    rgba(31, 117, 134, 0.9) 99%
+  );
+}
+
+.experience {
+  display: grid;
+  grid-template-columns: 25fr 40fr 35fr;
+  grid-template-rows: 0.5fr 1fr repeat(6, 0.5fr);
+  row-gap: 4.8rem;
+  padding: 2.4rem 6.4rem;
+
+  line-height: 1.6;
+}
+
+.company {
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+  grid-column: 1 / -1;
+}
+
+.company-logo-link {
+  max-width: 25%;
+}
+
+.company-logo {
+  max-width: 100%;
+  border-radius: 9px;
+}
+
+.experience-company {
+  font-size: 4.4rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #032228;
+}
+
+.experience-job {
+  grid-column: 1/3;
+  display: flex;
+  align-items: center;
+
+  border-bottom: solid 0.2rem #042e35;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #042e35;
+}
+
+.experience-date {
+  font-size: 2rem;
+  font-weight: 500;
+
+  background-color: #032228;
+  color: #cee3e7;
+
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+}
+
+.experience-description {
+  grid-column: 1 / 3;
+
+  font-size: 1.6rem;
+  font-weight: 600;
+  /* because the grid row gap is too much that it makes the description look like its own thing, margin-top minus 3 will move the text up overriding the gap sort of */
+  margin-top: -3rem;
+}
+
+/*Background color light for older experience dated jobs */
+.bg-color-l {
+  background-color: #9dc7ce;
+  border-bottom: 0.2rem solid #032228;
+}
+
+/****************************************/
+/* SKILLS MARQUEE SECTION */
+/****************************************/
+.section-skills {
+  padding: 9.6rem 0 0 0;
+}
+
+.skills-marquee {
+  /* max-width so the marquee disappears on both sides */
+  max-width: 85%;
+  margin: 4.8rem auto;
+  padding: 1.2rem 0;
+  border-radius: 999rem;
+
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.skill-list {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+
+  text-transform: uppercase;
+}
+
+/* they actual animation in combination with keyframes */
+.marquee-animation {
+  animation: marquee 30s linear infinite alternate;
+}
+
+.skill-item {
+  display: inline;
+  color: #cee3e7;
+  padding: 0.8rem;
+  border-radius: 99rem;
+  margin: 0.4rem;
+}
+
+.marquee-animation:hover {
+  animation-play-state: paused;
+}
+
+/* keyframes used to make the marquee move during animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-120%);
+  }
+}
+
+/* colors for the 3 types */
+.technical {
+  background: #063943;
+}
+.soft {
+  background: #0b7285;
+}
+.language {
+  background: #cee3e7;
+  color: #032228;
+}
+
+/****************************************/
+/* PORTFOLIO SECTION */
+/****************************************/
+
+.section-portfolio {
+  padding: 0 0 9.6rem 0;
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(2, 3fr) 2fr;
+  gap: 4.8rem;
+
+  padding: 2.4rem 6.4rem;
+}
+
+.portfolio-item {
+  border-radius: 9px;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* setting grid column here so it will fill up the next row in the grid */
+.portfolio-item--ics {
+  background: linear-gradient(180deg, #b11e6a, #fff);
+  grid-column: 1/2;
+}
+
+.portfolio-item--omnifood {
+  background: linear-gradient(180deg, #e67e22, #fff);
+}
+/* img width 100% of parent */
+.portfolio-img {
+  width: 100%;
+}
+
+.portfolio-content {
+  padding: 3.2rem 2.4rem;
+}
+
+.portfolio-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #032228;
+
+  margin-bottom: 3.2rem;
+  text-align: center;
+}
+
+.portfolio-text {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 3.2rem;
+}
+
+.portfolio-status {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 0 2.4rem;
+}
+
+.status-heading {
+  font-size: 1.4rem;
+  font-style: italic;
+  font-weight: 500;
+  color: #767676;
+}
+
+/* maybe use flex-center class? */
+.status-tag {
+  gap: 0.4rem;
+
+  font-size: 1.4rem;
+  font-weight: 700;
+
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+
+  padding: 1rem 2rem;
+  border-radius: 999rem;
+}
+
+.tag--active-omnifood:hover,
+.tag--active-omnifood:active {
+  background-color: #cf711f;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.tag--active-omnifood {
+  background-color: #e67e22;
+}
+
+.tag--onhold-ics {
+  background-color: #ced4da;
+}
+
+.status-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+/* ANIMATION PROJECT CARDS */
+
+/* ICS AURORA PROJECT */
+/* no generic class for the cards although animation is the same, because keyframes are different per card! */
+
+.animate-div-ics {
+  animation: scroll-div-ics 2s ease-in-out;
+}
+
+/* makes the card slide in from left to right */
+@keyframes scroll-div-ics {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+/* makes the card just rotate on its own axis sideways, when trying to make in slide in from above flickering happens when scrolling down to up again.*/
+/* OMNIFOOD PROJECT */
+.animate-div-omni {
+  animation: scroll-div-omni 2s ease-in-out;
+}
+
+@keyframes scroll-div-omni {
+  0% {
+    opacity: 0;
+    transform: rotateY(180deg);
+    /* transform: translateY(-50%); */
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0);
+    /* transform: translateY(0%); */
+  }
+}
+
+/* makes the card slide in from right to left. */
+/* ACHIEVEMENTS */
+.animate-div-achievement {
+  animation: scroll-div-achievement 2s ease-in-out;
+}
+
+@keyframes scroll-div-achievement {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+/****************************************/
+/* ACHIEVEMENTS LIST */
+/****************************************/
+
+.achievements {
+  background: linear-gradient(180deg, #fff, #0b7285);
+  border-radius: 9px;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.08);
+  /* first padding */
+  padding: 1.2rem;
+}
+
+.subheading.flex-center {
+  gap: 1.2rem;
+}
+
+.achievements-list {
+  gap: 1.6rem;
+  /* second padding now all cards have 2.4rem padding left/right */
+  padding: 0 1.2rem;
+  background: linear-gradient(180deg, #032228, #0b7285 72%, #cee3e7 75%);
+  /* background properties needed otherwise it will not work with gradient. */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.achievement {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/****************************************/
+/* CTA SECTION */
+/****************************************/
+.section-cta {
+  /* more padding to make it more distant from body content. */
+  padding: 12.8rem 0;
+}
+
+.cta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  max-width: 110rem;
+  margin: 0 auto;
+
+  background: #9dc7ce;
+  box-shadow: 0px 2px 30px rgb(0 0 0 / 25%);
+  border-radius: 9px;
+}
+
+/* instead of img element, empty div is used here */
+.cta-gif {
+  background-image: url(/img/youre-still-here-deku.gif);
+  background-size: cover;
+  border-radius: 9px 0 0 9px;
+}
+
+.cta-text-box {
+  gap: 2.4rem;
+  color: #fff;
+  padding: 3.2rem 2.4rem;
+}
+
+.cta-text-box a {
+  /* max content here, if margin isnt set the button will expand full parent width. */
+  width: max-content;
+  margin: 0 auto;
+}
+
+.cta-heading {
+  font-size: 3.6rem;
+  font-weight: 600;
+}
+
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+/****************************************/
+/* FOOTER SECTION */
+/****************************************/
+
+.footer {
+  border: 2px solid #0b7285;
+  color: #fff;
+  /* position set to anything but static to make z-index work */
+  position: relative;
+  background-color: #032228;
+  box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.2);
+
+  /* need a lot of space to make clear that CTA section is the last content */
+  margin-top: 25.6rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 4.8rem;
+  padding: 6.4rem 0;
+}
+
+.first-col {
+  /* stretching the div horizontally and vertically */
+  grid-column: 1 /3;
+  grid-row: 1 /3;
+}
+
+/* using margin-top here so that the first-col class can be made more generic! */
+.first-col div {
+  margin-top: auto;
+}
+
+.footer-heading {
+  font-size: 4.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.75rem;
+}
+
+/* added focus outline back from *:focus general rule otherwise the boxshadow breaks and doesnt outline properly because its on 2 lines.  */
+.footer-heading a:focus {
+  outline: auto;
+  outline-style: solid;
+  outline-color: #0b7285;
+  outline-width: 0.8rem;
+  box-shadow: none;
+}
+
+.footer-social {
+  display: flex;
+  gap: 2.4rem;
+  margin-bottom: 3.2rem;
+}
+
+/* on hover rotate the icon */
+.footer-social a:hover {
+  transform: rotate(360deg);
+  transition: transform 1s;
+}
+
+.copyright {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.nav-col {
+  gap: 2.4rem;
+}
+
+.nav-col .subheading {
+  margin-bottom: 0;
+}
+
+.footer-link {
+  font-size: 1.6rem;
+}
